@@ -1,10 +1,12 @@
 package stanko.spring.sfgpetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import stanko.spring.sfgpetclinic.model.Owner;
 import stanko.spring.sfgpetclinic.services.CrudServices;
 import stanko.spring.sfgpetclinic.services.OwnerService;
 import stanko.spring.sfgpetclinic.services.map.AbstractMapService;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements OwnerService {
 
     @Override

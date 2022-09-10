@@ -6,8 +6,6 @@ import stanko.spring.sfgpetclinic.model.Owner;
 import stanko.spring.sfgpetclinic.model.Vet;
 import stanko.spring.sfgpetclinic.services.OwnerService;
 import stanko.spring.sfgpetclinic.services.VetService;
-import stanko.spring.sfgpetclinic.services.map.OwnerServiceMap;
-import stanko.spring.sfgpetclinic.services.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -16,9 +14,10 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
 
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+
+        this.vetService = vetService;
     }
 
 
