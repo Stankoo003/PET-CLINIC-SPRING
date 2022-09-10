@@ -4,7 +4,7 @@ import stanko.spring.sfgpetclinic.model.Vet;
 import stanko.spring.sfgpetclinic.services.CrudServices;
 import stanko.spring.sfgpetclinic.services.VetService;
 
-public class VetServiceMap extends AbstractMapService<Vet,Long> implements CrudServices<Vet,Long> {
+public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetService {
     @Override
     public Vet findbyId(Long aLong) {
         return super.findById(aLong);
