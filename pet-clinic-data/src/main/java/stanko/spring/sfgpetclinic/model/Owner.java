@@ -1,11 +1,15 @@
 package stanko.spring.sfgpetclinic.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class Owner extends Person{
-    private Set<Pet> pets;
+    private Set<Pet> pets = new HashSet<>();
+    private String address;
     private String city;
     private String telephone;
+
+
 
     public Set<Pet> getPets() {
         return pets;
@@ -13,6 +17,14 @@ public class Owner extends Person{
 
     public void setPets(Set<Pet> pets) {
         this.pets = pets;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getCity() {
