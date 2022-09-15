@@ -9,7 +9,11 @@ public class indexController {
     @RequestMapping({"","/","index","index.html"})
     public String index(){
         return "index";
-
     }
+    @RequestMapping("/oups")
+    public String simulateError(){
+        return "notimplemented";
+    }
+
 
 }
