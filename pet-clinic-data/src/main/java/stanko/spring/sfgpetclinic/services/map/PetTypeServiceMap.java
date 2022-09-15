@@ -6,7 +6,7 @@ import stanko.spring.sfgpetclinic.model.PetType;
 import stanko.spring.sfgpetclinic.services.PetTypeService;
 
 @Service
-public class PetTypeServiceMap extends AbstractMapService<PetType,Long>implements PetTypeService<PetType,Long> {
+public class PetTypeServiceMap extends AbstractMapService<PetType,Long>implements PetTypeService{
     @Override
     public PetType findbyId(Long aLong) {
         return super.findById(aLong);
